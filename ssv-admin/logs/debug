@@ -328,3 +328,56 @@
 [2020-09-07 01:31:20,211]-[DEBUG]:{conn-210001} pool-connect   
 [2020-09-07 01:31:20,212]-[DEBUG]:{conn-210001} pool-recycle   
 [2020-09-07 01:31:26,321]-[DEBUG]:{conn-210001} closed   
+[2020-09-07 01:31:37,326]-[DEBUG]:{conn-10001,procId-61} connected   
+[2020-09-07 01:31:37,453]-[DEBUG]:{conn-10001} pool-connect   
+[2020-09-07 01:31:37,457]-[DEBUG]:{conn-10001} pool-recycle   
+[2020-09-07 01:31:38,010]-[DEBUG]:{conn-10001} pool-connect   
+[2020-09-07 01:31:38,118]-[DEBUG]:{conn-10001} pool-recycle   
+[2020-09-07 01:31:38,329]-[DEBUG]:{conn-10001} pool-connect   
+[2020-09-07 01:31:38,330]-[DEBUG]:{conn-10001} pool-recycle   
+[2020-09-07 01:31:38,862]-[DEBUG]:{conn-10001} pool-connect   
+[2020-09-07 01:31:38,867]-[DEBUG]:{conn-10001} pool-recycle   
+[2020-09-07 01:32:35,627]-[DEBUG]:{conn-10001} closed   
+[2020-09-07 01:32:36,834]-[DEBUG]:{conn-110001,procId-62} connected   
+[2020-09-07 01:32:36,959]-[DEBUG]:{conn-110001} pool-connect   
+[2020-09-07 01:32:36,959]-[DEBUG]:{conn-110001} pool-recycle   
+[2020-09-07 01:32:36,973]-[DEBUG]:{conn-110001} pool-connect   
+[2020-09-07 01:32:36,979]-[DEBUG]:{conn-110001} pool-recycle   
+[2020-09-07 01:32:36,985]-[DEBUG]:{conn-110001} pool-connect   
+[2020-09-07 01:32:36,986]-[DEBUG]:{conn-110001} pool-recycle   
+[2020-09-07 01:32:37,277]-[DEBUG]:{conn-110001} pool-connect   
+[2020-09-07 01:32:37,277]-[DEBUG]:{conn-110001} pool-recycle   
+[2020-09-07 01:33:54,050]-[DEBUG]:{conn-110001} closed   
+[2020-09-07 01:33:55,186]-[DEBUG]:{conn-210001,procId-63} connected   
+[2020-09-07 01:33:55,220]-[DEBUG]:{conn-210001} pool-connect   
+[2020-09-07 01:33:55,220]-[DEBUG]:{conn-210001} pool-recycle   
+[2020-09-07 01:33:55,227]-[DEBUG]:{conn-210001} pool-connect   
+[2020-09-07 01:33:55,231]-[DEBUG]:{conn-210001} pool-recycle   
+[2020-09-07 01:33:55,238]-[DEBUG]:{conn-210001} pool-connect   
+[2020-09-07 01:33:55,239]-[DEBUG]:{conn-210001} pool-recycle   
+[2020-09-07 01:33:55,470]-[DEBUG]:{conn-210001} pool-connect   
+[2020-09-07 01:33:55,470]-[DEBUG]:{conn-210001} pool-recycle   
+[2020-09-07 01:34:02,013]-[DEBUG]:{conn-210001} pool-connect   
+[2020-09-07 01:34:02,225]-[DEBUG]:{conn-210001, pstmt-220000} created. select *
+    from sys_user   
+[2020-09-07 01:34:02,241]-[DEBUG]:{conn-210001, pstmt-220000} Parameters : []   
+[2020-09-07 01:34:02,241]-[DEBUG]:{conn-210001, pstmt-220000} Types : []   
+[2020-09-07 01:34:02,243]-[DEBUG]:{conn-210001, pstmt-220000} executed. 4.17 millis. select *
+    from sys_user   
+[2020-09-07 01:34:02,246]-[DEBUG]:{conn-210001, pstmt-220000, rs-250000} open   
+[2020-09-07 01:34:02,248]-[DEBUG]:{conn-210001, pstmt-220000, rs-250000} Header: [id, name, nick_name, avatar, password, salt, email, mobile, status, dept_id, create_by, create_time, last_update_by, last_update_time, del_flag]   
+[2020-09-07 01:34:02,256]-[DEBUG]:{conn-210001, pstmt-220000, rs-250000} Result: [1, admin, 超管, null, bd1718f058d8a02468134432b8656a86, YzcmCZNvbXocrsz9dm8e, admin@qq.com, 13612345678, 1, 4, admin, 2018-08-14 11:11:11.0, admin, 2018-08-14 11:11:11.0, 0]   
+[2020-09-07 01:34:02,262]-[DEBUG]:{conn-210001, pstmt-220000, rs-250000} Result: [22, liubei, 刘备, null, fd80ebd493a655608dc893a9f897d845, YzcmCZNvbXocrsz9dm8e, test@qq.com, 13889700023, 1, 7, admin, 2018-09-23 19:43:00.0, admin, 2019-01-10 11:41:13.0, 0]   
+[2020-09-07 01:34:02,263]-[DEBUG]:{conn-210001, pstmt-220000, rs-250000} Result: [23, zhaoyun, 赵云, null, fd80ebd493a655608dc893a9f897d845, YzcmCZNvbXocrsz9dm8e, test@qq.com, 13889700023, 1, 7, admin, 2018-09-23 19:43:44.0, admin, 2018-09-23 19:43:52.0, 0]   
+[2020-09-07 01:34:02,263]-[DEBUG]:{conn-210001, pstmt-220000, rs-250000} Result: [24, zhugeliang, 诸葛亮, null, fd80ebd493a655608dc893a9f897d845, YzcmCZNvbXocrsz9dm8e, test@qq.com, 13889700023, 7, 11, admin, 2018-09-23 19:44:23.0, admin, 2018-09-23 19:44:29.0, 0]   
+[2020-09-07 01:34:02,263]-[DEBUG]:{conn-210001, pstmt-220000, rs-250000} Result: [25, caocao, 曹操, null, fd80ebd493a655608dc893a9f897d845, YzcmCZNvbXocrsz9dm8e, test@qq.com, 13889700023, 1, 8, admin, 2018-09-23 19:45:32.0, admin, 2019-01-10 17:59:14.0, 0]   
+[2020-09-07 01:34:02,264]-[DEBUG]:{conn-210001, pstmt-220000, rs-250000} Result: [26, dianwei, 典韦, null, fd80ebd493a655608dc893a9f897d845, YzcmCZNvbXocrsz9dm8e, test@qq.com, 13889700023, 1, 10, admin, 2018-09-23 19:45:48.0, admin, 2018-09-23 19:45:57.0, 0]   
+[2020-09-07 01:34:02,264]-[DEBUG]:{conn-210001, pstmt-220000, rs-250000} Result: [27, xiahoudun, 夏侯惇, null, fd80ebd493a655608dc893a9f897d845, YzcmCZNvbXocrsz9dm8e, test@qq.com, 13889700023, 1, 8, admin, 2018-09-23 19:46:09.0, admin, 2018-09-23 19:46:17.0, 0]   
+[2020-09-07 01:34:02,264]-[DEBUG]:{conn-210001, pstmt-220000, rs-250000} Result: [28, xunyu, 荀彧, null, fd80ebd493a655608dc893a9f897d845, YzcmCZNvbXocrsz9dm8e, test@qq.com, 13889700023, 1, 10, admin, 2018-09-23 19:46:38.0, admin, 2018-11-04 15:33:17.0, 0]   
+[2020-09-07 01:34:02,264]-[DEBUG]:{conn-210001, pstmt-220000, rs-250000} Result: [29, sunquan, 孙权, null, fd80ebd493a655608dc893a9f897d845, YzcmCZNvbXocrsz9dm8e, test@qq.com, 13889700023, 1, 10, admin, 2018-09-23 19:46:54.0, admin, 2018-09-23 19:47:03.0, 0]   
+[2020-09-07 01:34:02,264]-[DEBUG]:{conn-210001, pstmt-220000, rs-250000} Result: [30, zhouyu, 周瑜, null, fd80ebd493a655608dc893a9f897d845, YzcmCZNvbXocrsz9dm8e, test@qq.com, 13889700023, 1, 11, admin, 2018-09-23 19:47:28.0, admin, 2018-09-23 19:48:04.0, 0]   
+[2020-09-07 01:34:02,265]-[DEBUG]:{conn-210001, pstmt-220000, rs-250000} Result: [31, luxun, 陆逊, null, fd80ebd493a655608dc893a9f897d845, YzcmCZNvbXocrsz9dm8e, test@qq.com, 13889700023, 1, 11, admin, 2018-09-23 19:47:44.0, admin, 2018-09-23 19:47:58.0, 0]   
+[2020-09-07 01:34:02,265]-[DEBUG]:{conn-210001, pstmt-220000, rs-250000} Result: [32, huanggai, 黄盖, null, fd80ebd493a655608dc893a9f897d845, YzcmCZNvbXocrsz9dm8e, test@qq.com, 13889700023, 1, 11, admin, 2018-09-23 19:48:38.0, admin, 2018-09-23 19:49:02.0, 0]   
+[2020-09-07 01:34:02,265]-[DEBUG]:{conn-210001, pstmt-220000, rs-250000} closed   
+[2020-09-07 01:34:02,265]-[DEBUG]:{conn-210001, pstmt-220000} clearParameters.    
+[2020-09-07 01:34:02,266]-[DEBUG]:{conn-210001} pool-recycle   
