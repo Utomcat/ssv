@@ -1,4 +1,5 @@
-package com.ranyk.mango.common.utils;
+package com.ranyk.ssv.common.utils;
+
 
 import org.jetbrains.annotations.NotNull;
 

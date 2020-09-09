@@ -1,7 +1,8 @@
-package com.ranyk.mango.core.service;
+package com.ranyk.ssv.core.service;
 
-import com.ranyk.mango.core.page.PageRequest;
-import com.ranyk.mango.core.page.PageResult;
+
+import com.ranyk.ssv.core.page.PageRequest;
+import com.ranyk.ssv.core.page.PageResult;
 
 import java.util.List;
 

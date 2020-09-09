@@ -1,4 +1,4 @@
-package com.ranyk.mango.common.utils;
+package com.ranyk.ssv.common.utils;
 
 /**
  * ClassName:StringUtils

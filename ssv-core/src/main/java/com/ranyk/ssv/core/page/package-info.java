@@ -1,4 +1,4 @@
-package com.ranyk.mango.core.page;
+package com.ranyk.ssv.core.page;
 /**
  * ClassName:package-info
  * Description:分页代码封装

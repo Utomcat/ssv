@@ -1,5 +1,7 @@
-package com.ranyk.mango.core.http;
+package com.ranyk.ssv.core.http;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
@@ -13,21 +15,25 @@ import org.jetbrains.annotations.NotNull;
  * Version: V1.0
  */
 @Data
+@ApiModel(value = "请求结果封装对象")
 public class HttpResult {
 
     /**
      * 声明Http请求返回的状态码变量，并初始化其值为200(请求响应成功)
      */
+    @ApiModelProperty(name = "code",value = "返回响应请求的状态码,默认200",dataType = "int",example = "200")
     private int code = 200;
 
     /**
      * 声明Http请求返回的信息变量
      */
+    @ApiModelProperty(name = "msg",value = "返回响应请求的响应信息",dataType = "java.lang.String",example = "请求成功")
     private  String  msg;
 
     /**
      * 声明Http请求返回的数据对象
      */
+    @ApiModelProperty(name = "data",value = "返回响应请求的数据",dataType = "java.lang.Object",example = "User对象")
     private Object data;
 
     /**

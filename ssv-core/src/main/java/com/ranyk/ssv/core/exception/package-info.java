@@ -1,4 +1,4 @@
-package com.ranyk.mango.core.exception;
+package com.ranyk.ssv.core.exception;
 /**
  * ClassName:package-info
  * Description:异常信息封装包

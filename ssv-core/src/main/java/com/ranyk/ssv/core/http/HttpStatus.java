@@ -1,4 +1,4 @@
-package com.ranyk.mango.core.http;
+package com.ranyk.ssv.core.http;
 
 /**
  * ClassName:HttpStatus

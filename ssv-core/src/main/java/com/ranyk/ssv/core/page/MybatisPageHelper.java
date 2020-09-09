@@ -1,8 +1,8 @@
-package com.ranyk.mango.core.page;
+package com.ranyk.ssv.core.page;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-import com.ranyk.mango.common.utils.ReflectionUtils;
+import com.ranyk.ssv.common.utils.ReflectionUtils;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;

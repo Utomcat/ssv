@@ -1,4 +1,4 @@
-package com.ranyk.mango.core.http;
+package com.ranyk.ssv.core.http;
 /**
  * ClassName:package-info
  * Description:HTTP返回结果封装
