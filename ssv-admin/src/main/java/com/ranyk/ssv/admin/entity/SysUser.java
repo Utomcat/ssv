@@ -5,6 +5,9 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.*;
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * ClassName:SysUser
  * Description:
@@ -16,11 +19,11 @@ import org.springframework.stereotype.Component;
 @Data
 @ToString
 @Component
-@EqualsAndHashCode
 @NoArgsConstructor
 @AllArgsConstructor
+@EqualsAndHashCode(callSuper = false)
 @ApiModel(value = "系统用户类",description = "记录系统中各用户的信息")
-public class SysUser {
+public class SysUser extends BaseModel{
 
     @ApiModelProperty(name = "name",value = "用户姓名",dataType = "java.lang.String")
     private String name;
@@ -58,8 +61,8 @@ public class SysUser {
     @ApiModelProperty(name = "roleNames",value = "非数据库字段:用户拥有的角色名",dataType = "java.lang.String")
     private String roleNames;
 
-    /*@ApiModelProperty(name = "userRoles",value = "用户拥有的所有角色的相关信息",dataType = "java.util.List")
-    private List<SysUserRole> userRoles = new ArrayList<>();*/
+    @ApiModelProperty(name = "userRoles",value = "用户拥有的所有角色的相关信息",dataType = "java.util.List")
+    private List<SysUserRole> userRoles = new ArrayList<>();
 
 
 }

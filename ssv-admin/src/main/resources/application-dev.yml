@@ -45,4 +45,4 @@ server:
   port: 8081
 #设置项目启动根目录
 #  servlet:
-#    context-path: /mango
+#    context-path: /ssv
