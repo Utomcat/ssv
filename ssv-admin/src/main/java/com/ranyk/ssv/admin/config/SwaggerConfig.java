@@ -7,12 +7,8 @@ import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
 import springfox.documentation.service.ApiInfo;
 import springfox.documentation.service.Contact;
-import springfox.documentation.service.ParameterType;
-import springfox.documentation.service.RequestParameter;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
-
-import java.util.ArrayList;
 
 /**
  * ClassName:SwaggerConfig
@@ -62,8 +58,8 @@ public class SwaggerConfig {
                 .select()
                 .apis(RequestHandlerSelectors.any())
                 .paths(PathSelectors.any())
-                .build()
-                .globalRequestParameters(new ArrayList<RequestParameter>().add(new RequestParameter("token", ParameterType.HEADER,"令牌",false,false,false,null,null,null,0,null,0)));
+                .build();
+                //.globalRequestParameters(new ArrayList<RequestParameter>().add(new RequestParameter("token", ParameterType.HEADER,"令牌",false,false,false,null,null,null,0,null,0)));
 
     }
 
