@@ -149,18 +149,20 @@
             <version>0.0.9</version>
         </dependency>
 
-        <!--spring security-->
-        <!--<dependency>
+        <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-security -->
+        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
-        </dependency>-->
+            <!--<version>2.3.3.RELEASE</version>-->
+        </dependency>
 
-        <!--jwt依赖-->
-        <!--<dependency>
+        <!-- https://mvnrepository.com/artifact/io.jsonwebtoken/jjwt -->
+        <dependency>
             <groupId>io.jsonwebtoken</groupId>
             <artifactId>jjwt</artifactId>
             <version>0.9.1</version>
-        </dependency>-->
+        </dependency>
+
 
         <dependency>
             <groupId>com.ranyk</groupId>
