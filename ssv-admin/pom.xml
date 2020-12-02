@@ -54,48 +54,19 @@
             <version>1.2.17</version>
             <scope>compile</scope>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/io.swagger.core.v3/swagger-annotations -->
-        <!--<dependency>
-            <groupId>io.swagger.core.v3</groupId>
-            <artifactId>swagger-annotations</artifactId>
-            <version>2.1.4</version>
-        </dependency>-->
-        <!-- https://mvnrepository.com/artifact/io.swagger.core.v3/swagger-core -->
-        <!--<dependency>
-            <groupId>io.swagger.core.v3</groupId>
-            <artifactId>swagger-core</artifactId>
-            <version>2.1.4</version>
-        </dependency>-->
-        <!-- https://mvnrepository.com/artifact/io.swagger.core.v3/swagger-models -->
-        <!--<dependency>
-            <groupId>io.swagger.core.v3</groupId>
-            <artifactId>swagger-models</artifactId>
-            <version>2.1.4</version>
-        </dependency>-->
-        <!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger-ui -->
-        <!--<dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger-ui</artifactId>
-            <version>3.0.0</version>
-        </dependency>-->
-        <!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger2 -->
-        <!--<dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger2</artifactId>
-            <version>3.0.0</version>
-        </dependency>-->
-        <!-- https://mvnrepository.com/artifact/io.springfox/springfox-core -->
-        <!--<dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-core</artifactId>
-            <version>3.0.0</version>
-        </dependency>-->
-        <!-- https://mvnrepository.com/artifact/io.springfox/springfox-boot-starter -->
+
+        <!--swagger-->
         <dependency>
             <groupId>io.springfox</groupId>
-            <artifactId>springfox-boot-starter</artifactId>
-            <version>3.0.0</version>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>2.9.2</version>
         </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+            <version>2.9.2</version>
+        </dependency>
+
 
 
         <dependency>
@@ -142,7 +113,7 @@
             <artifactId>annotations</artifactId>
             <version>18.0.0</version>
         </dependency>
-        <!--提阿难捱  kaptcha 的依赖 -->
+        <!--验证码  kaptcha 的依赖 -->
         <dependency>
             <groupId>com.github.axet</groupId>
             <artifactId>kaptcha</artifactId>
@@ -153,7 +124,6 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
-            <!--<version>2.3.3.RELEASE</version>-->
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/io.jsonwebtoken/jjwt -->
@@ -161,6 +131,13 @@
             <groupId>io.jsonwebtoken</groupId>
             <artifactId>jjwt</artifactId>
             <version>0.9.1</version>
+        </dependency>
+
+        <!-- fastjson -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.74</version>
         </dependency>
 
 

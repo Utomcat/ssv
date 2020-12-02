@@ -36,7 +36,7 @@ public class SysRoleController {
 	public HttpResult save(@RequestBody SysRole record) {
 		SysRole role = sysRoleService.findById(record.getId());
 		if(role != null) {
-			if(SysConstants.ADMIN.getName().equalsIgnoreCase(role.getName())) {
+			if(SysConstants.ADMIN.getValue().equalsIgnoreCase(role.getName())) {
 				return HttpResult.error("超级管理员不允许修改!");
 			}
 		}
@@ -76,7 +76,7 @@ public class SysRoleController {
 	public HttpResult saveRoleMenus(@RequestBody List<SysRoleMenu> records) {
 		for(SysRoleMenu record:records) {
 			SysRole sysRole = sysRoleMapper.selectByPrimaryKey(record.getRoleId());
-			if(SysConstants.ADMIN.getName().equalsIgnoreCase(sysRole.getName())) {
+			if(SysConstants.ADMIN.getValue().equalsIgnoreCase(sysRole.getName())) {
 				// 如果是超级管理员，不允许修改
 				return HttpResult.error("超级管理员拥有所有菜单权限，不允许修改！");
 			}

@@ -32,7 +32,7 @@ spring:
 #MyBatis配置
 mybatis:
   mapper-locations: classpath:sqlmap/*.xml
-  type-aliases-package: com.ranyk.ssv.admin.entity
+  type-aliases-package: com.ranyk.ssv.*.entity
 
 #后台输出打印执行SQL
 logging:
@@ -42,7 +42,7 @@ logging:
 
 #设置测试服务器启动端口和启动根目录配置
 server:
-  port: 8081
+  port: 8086
 #设置项目启动根目录
 #  servlet:
 #    context-path: /ssv

@@ -24,6 +24,11 @@ public class JwtAuthenticatioToken extends UsernamePasswordAuthenticationToken {
         super(principal, credentials);
     }
 
+    public JwtAuthenticatioToken(Object principal, Object credentials, String token){
+        super(principal, credentials);
+        this.token = token;
+    }
+
     public JwtAuthenticatioToken(Object principal, Object credentials, Collection<? extends GrantedAuthority> authorities) {
         super(principal, credentials, authorities);
         this.token = token;

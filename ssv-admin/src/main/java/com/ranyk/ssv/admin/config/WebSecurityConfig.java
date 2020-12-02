@@ -3,7 +3,9 @@ package com.ranyk.ssv.admin.config;
 
 import com.ranyk.ssv.admin.security.JwtAuthenticationFilter;
 import com.ranyk.ssv.admin.security.JwtAuthenticationProvider;
+import com.ranyk.ssv.admin.security.JwtLoginFilter;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
@@ -11,7 +13,6 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
-import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -36,10 +37,11 @@ import org.springframework.security.web.authentication.logout.HttpStatusReturnin
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
+    @Qualifier("userDetailsServiceImpl")
     private UserDetailsService userDetailsService;
 
     @Override
-    public void configure(AuthenticationManagerBuilder auth){
+    public void configure(AuthenticationManagerBuilder auth) throws Exception{
         // 使用自定义身份验证组件
         auth.authenticationProvider(new JwtAuthenticationProvider(userDetailsService));
     }
@@ -48,7 +50,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         // 禁用 csrf, 由于使用的是JWT，我们这里不需要csrf
-        http.cors().and().csrf().disable().authorizeRequests()
+        http.cors().and().csrf().disable()
+                .authorizeRequests()
                 // 跨域预检请求
                 .antMatchers(HttpMethod.OPTIONS, "/**").permitAll()
                 // web jars
@@ -59,30 +62,22 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/").permitAll()
                 .antMatchers("/login").permitAll()
                 // swagger
-                .antMatchers("/swagger-ui/*").permitAll()
                 .antMatchers("/swagger-ui.html").permitAll()
                 .antMatchers("/swagger-resources/**").permitAll()
                 .antMatchers("/v2/api-docs").permitAll()
-                .antMatchers("/v3/api-docs").permitAll()
-                .antMatchers("/webjars/**").permitAll()
+                .antMatchers("/webjars/springfox-swagger-ui/**").permitAll()
                 // 验证码
-                .antMatchers("/captcha.jpg**").permitAll()
+                .antMatchers("/**/captcha.jpg").permitAll()
                 // 服务监控
                 .antMatchers("/actuator/**").permitAll()
                 // 其他所有请求需要身份认证
                 .anyRequest().authenticated();
-        // 退出登录处理器
-        http.logout().logoutSuccessHandler(new HttpStatusReturningLogoutSuccessHandler());
+
+        http.addFilterBefore(new JwtLoginFilter(authenticationManager()), UsernamePasswordAuthenticationFilter.class);
         // token验证过滤器
         http.addFilterBefore(new JwtAuthenticationFilter(authenticationManager()), UsernamePasswordAuthenticationFilter.class);
-    }
-
-
-    @Override
-    public void configure(WebSecurity web)  {
-        web.ignoring().antMatchers("/v3/api-docs",
-                "/swagger-ui.html",
-                "/swagger-ui/**");
+        // 退出登录处理器
+        http.logout().logoutSuccessHandler(new HttpStatusReturningLogoutSuccessHandler());
     }
 
     @Bean

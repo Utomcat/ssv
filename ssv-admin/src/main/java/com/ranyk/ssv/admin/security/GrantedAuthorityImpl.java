@@ -1,5 +1,6 @@
 package com.ranyk.ssv.admin.security;
 
+import lombok.Setter;
 import org.springframework.security.core.GrantedAuthority;
 
 /**
@@ -10,6 +11,7 @@ import org.springframework.security.core.GrantedAuthority;
  * @date 2019-12-27 22:33
  * Version: V1.0
  */
+@Setter
 public class GrantedAuthorityImpl implements GrantedAuthority {
 
     private static final long serialVersionUID = 1L;
@@ -19,11 +21,6 @@ public class GrantedAuthorityImpl implements GrantedAuthority {
     public GrantedAuthorityImpl(String authority) {
         this.authority = authority;
     }
-
-    public void setAuthority(String authority) {
-        this.authority = authority;
-    }
-
 
     @Override
     public String getAuthority() {

@@ -1,5 +1,6 @@
 package com.ranyk.ssv.admin.constent;
 
+import com.ranyk.ssv.common.constent.BaseEnumConstantInterfaceVO;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -12,7 +13,7 @@ import io.swagger.annotations.ApiModelProperty;
  * Version: V1.0
  */
 @ApiModel(value = "系统定义的常量类")
-public enum SysConstants {
+public enum SysConstants implements BaseEnumConstantInterfaceVO<String> {
 
     /**
      * 管理员名称
@@ -35,20 +36,22 @@ public enum SysConstants {
     private String name;
 
     /**
-     * get方法
+     * 获取指定的常量值
      *
-     * @return 返回对应的值
+     * @return 返回给定类型的常量值
      */
-    public String getName() {
-        return name;
+    @Override
+    public String getValue() {
+        return this.name;
     }
 
     /**
-     * set方法
+     * 设置指定的常量值
      *
-     * @param name 参数值
+     * @param value 需设置的值
      */
-    public void setName(String name) {
-        this.name = name;
+    @Override
+    public void setValue(String value) {
+        this.name = value;
     }
 }

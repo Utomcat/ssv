@@ -43,7 +43,7 @@ public class SysUserController {
     public HttpResult save(@RequestBody SysUser record) {
         SysUser user = sysUserService.findById(record.getId());
         if(user != null) {
-            if(SysConstants.ADMIN.getName().equalsIgnoreCase(user.getName())) {
+            if(SysConstants.ADMIN.getValue().equalsIgnoreCase(user.getName())) {
                 return HttpResult.error("超级管理员不允许修改!");
             }
         }
@@ -74,7 +74,7 @@ public class SysUserController {
     public HttpResult delete(@RequestBody List<SysUser> records) {
         for(SysUser record:records) {
             SysUser sysUser = sysUserService.findById(record.getId());
-            if(sysUser != null && SysConstants.ADMIN.getName().equalsIgnoreCase(sysUser.getName())) {
+            if(sysUser != null && SysConstants.ADMIN.getValue().equalsIgnoreCase(sysUser.getName())) {
                 return HttpResult.error("超级管理员不允许删除!");
             }
         }
