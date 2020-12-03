@@ -4,17 +4,14 @@ package com.ranyk.ssv.admin.controller;
 import com.google.code.kaptcha.Constants;
 import com.google.code.kaptcha.Producer;
 import com.ranyk.ssv.admin.entity.SysUser;
-import com.ranyk.ssv.admin.security.JwtAuthenticatioToken;
 import com.ranyk.ssv.admin.service.SysUserService;
 import com.ranyk.ssv.admin.util.PasswordUtils;
-import com.ranyk.ssv.admin.util.SecurityUtils;
 import com.ranyk.ssv.admin.vo.LoginBean;
 import com.ranyk.ssv.common.utils.IOUtils;
 import com.ranyk.ssv.core.http.HttpResult;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.web.bind.annotation.*;
 
 import javax.imageio.ImageIO;
@@ -40,8 +37,6 @@ public class SysLoginController {
 	private Producer producer;
 	@Autowired
 	private SysUserService sysUserService;
-	@Autowired
-	private AuthenticationManager authenticationManager;
 
 	@GetMapping("captcha.jpg")
 	@ApiOperation("获取图片验证码")
@@ -92,10 +87,7 @@ public class SysLoginController {
 			return HttpResult.error("账号已被锁定,请联系管理员");
 		}
 
-		//系统登录认证
-		JwtAuthenticatioToken token = SecurityUtils.login(request,username, password,authenticationManager);
-
-		return HttpResult.ok(token);
+		return HttpResult.ok("登录成功");
 	}
 
 }

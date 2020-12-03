@@ -1,1 +1,3 @@
 /ssv-common/target/
+*.iml
+/ssv-common/*.iml

@@ -1,7 +1,7 @@
 package com.ranyk.ssv.common.constent;
 
 /**
- * ClassName:BaseEnumConstantInterfaceVO
+ * ClassName:BaseEnumConstantInterfaceVO<br/>
  * Description:获取常量值的通用接口
  *
  * @author ranyi

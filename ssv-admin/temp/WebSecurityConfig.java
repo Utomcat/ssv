@@ -3,7 +3,6 @@ package com.ranyk.ssv.admin.config;
 
 import com.ranyk.ssv.admin.security.JwtAuthenticationFilter;
 import com.ranyk.ssv.admin.security.JwtAuthenticationProvider;
-import com.ranyk.ssv.admin.security.JwtLoginFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
@@ -60,7 +59,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/druid/**").permitAll()
                 // 首页和登录页面
                 .antMatchers("/").permitAll()
-                .antMatchers("/login").permitAll()
+                .antMatchers("/sys_login/**").permitAll()
                 // swagger
                 .antMatchers("/swagger-ui.html").permitAll()
                 .antMatchers("/swagger-resources/**").permitAll()
@@ -72,8 +71,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/actuator/**").permitAll()
                 // 其他所有请求需要身份认证
                 .anyRequest().authenticated();
-
-        http.addFilterBefore(new JwtLoginFilter(authenticationManager()), UsernamePasswordAuthenticationFilter.class);
         // token验证过滤器
         http.addFilterBefore(new JwtAuthenticationFilter(authenticationManager()), UsernamePasswordAuthenticationFilter.class);
         // 退出登录处理器
