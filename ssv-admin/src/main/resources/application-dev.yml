@@ -46,3 +46,8 @@ server:
 #设置项目启动根目录
 #  servlet:
 #    context-path: /ssv
+
+#自定义属性值
+custom:
+  attributes:
+    secret: abcdefg

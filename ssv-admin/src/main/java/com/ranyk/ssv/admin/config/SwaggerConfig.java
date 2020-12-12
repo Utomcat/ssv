@@ -32,9 +32,9 @@ public class SwaggerConfig {
 
         // 添加请求参数，我们这里把token作为请求头部参数传入后端
         ParameterBuilder builder = new ParameterBuilder();
-        List<Parameter> parameters = new ArrayList<>();
+        List<Parameter> parameters = new ArrayList<Parameter>();
 
-        builder.name("Authentication")
+        builder.name("Authorization")
                 .required(false)
                 .description("token 令牌")
                 .parameterType("header")

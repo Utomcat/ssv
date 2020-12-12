@@ -1,7 +1,7 @@
 package com.ranyk.ssv.common.utils;
 
 /**
- * ClassName:StringUtils
+ * ClassName:StringUtils<BR/>
  * Description:字符串工具类
  *
  * @author ranyi
@@ -11,12 +11,18 @@ package com.ranyk.ssv.common.utils;
 public class StringUtils {
 
     /**
-     * 判空操作
-     * @param value
-     * @return
+     * 字符串控制判断操作
+     *
+     * @param value 需要进行判断的字符串
+     * @return 返回判断结果: 是空字符串 true;反之 false;
      */
     public static boolean isBlank(String value) {
-        return value == null || "".equals(value) || "null".equals(value) || "undefined".equals(value);
+
+        boolean isEmpty = org.springframework.util.StringUtils.isEmpty(value);
+        boolean hasText = org.springframework.util.StringUtils.hasText(value);
+        boolean hasLength = org.springframework.util.StringUtils.hasLength(value);
+
+        return isEmpty || !hasText || !hasLength;
     }
 
 }
