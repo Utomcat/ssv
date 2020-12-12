@@ -1,0 +1,13 @@
+server:
+  port: 8087
+spring:
+  application:
+    name: ssv-backup
+
+ssv:
+  backup:
+    datasource:
+      host: localhost
+      userName: root
+      password: 123456
+      database: mango
